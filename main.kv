@@ -1,0 +1,150 @@
+<window>
+    t: CCButton
+    orientation: 'vertical'
+
+    BoxLayout:
+        size_hint: 1, None
+        size: 1, 20
+        pos_hint: {'top': 1}
+        spacing: -5
+        padding: -2
+        canvas:
+            Color:
+                rgb: (0, 0.93, 0)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        Button:
+            size_hint: None, None
+            pos_hint: {'top': 1}
+            border: (0,0,20,0)
+            size: 50, 20
+            text: "файл"
+            background_color: (1,1,0,1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+
+        Button:
+            size_hint: None, None
+            pos_hint: {'top': 1}
+            border: (0,0,20,0)
+            size: 50, 20
+            text: "2"
+
+        Button:
+            size_hint: None, None
+            pos_hint: {'top': 1}
+            border: (0,0,20,0)
+            size: 50, 20
+            text: "3"
+
+        Button:
+            size_hint: None, None
+            pos_hint: {'top': 1}
+            border: (0,0,20,0)
+            size: 50, 20
+            text: "4"
+
+        Button:
+            size_hint: None, None
+            pos_hint: {'top': 1}
+            border: (0,0,20,0)
+            size: 50, 20
+            text: "5"
+
+        Button:
+            size_hint: None, None
+            pos_hint: {'top': 1}
+            border: (0,0,20,0)
+            size: 50, 20
+            text: "6"
+
+    BoxLayout:
+
+        BoxLayout:
+            size_hint: None, 1
+            size: 47, 1
+            canvas:
+                Color:
+                    rgb: (0, 0.4, 0)
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            GridLayout:
+                cols: 2
+                size_hint: None, None
+                size: 47, 160
+                pos_hint: {'top': 1}
+                padding: (2, 3)
+                spacing: (2, 2)
+                canvas:
+                    Color:
+                        rgb: (0.4, 0.4, 0.4)
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                Button:
+                    size_hint: None, None
+                    size: 20, 20
+                    text: "7"
+                    Image:
+                        source: 'icon-nuclear.png'
+                        pos: self.parent.x, self.parent.y
+                        size: 20, 20
+                        allow_stretch: True
+
+                Button:
+                    size_hint: None, None
+                    size: 20, 20
+                    text: "8"
+
+                Button:
+                    size_hint: None, None
+                    size: 20, 20
+                    text: "9"
+
+                Button:
+                    size_hint: None, None
+                    size: 20, 20
+                    text: "10"
+
+                Button:
+                    size_hint: None, None
+                    size: 20, 20
+                    text: "11"
+
+                Button:
+                    size_hint: None, None
+                    size: 20, 20
+                    text: "12"
+
+                Button:
+                    size_hint: None, None
+                    size: 20, 20
+                    text: "13"
+
+                Button:
+                    size_hint: None, None
+                    size: 20, 20
+                    text: "14"
+
+        FloatLayout:
+            id: Float_place
+            canvas:
+                Color:
+                    rgb: (.8, .8, .8)
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            Button:
+                id: CCButton
+                size_hint: None, None
+                size: 100, 100
+                center_x: root.width / 2
+                center_y: root.height / 2
+                text: "move mi"
