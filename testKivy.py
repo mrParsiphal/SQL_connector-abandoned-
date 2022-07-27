@@ -15,12 +15,17 @@ Window.clearcolor = (.24, .55, .55, 0.2)
 
 class window(BoxLayout):
     t = ObjectProperty(None)
+    de = ObjectProperty(None)
 
     def on_touch_move(self, touch):
         if (touch.x < self.t.width / 2 + self.t.center_x) and (touch.x > self.t.center_x - self.t.width / 2) and \
                 (touch.y < self.t.height / 2 + self.t.center_y) and (touch.y > self.t.center_y - self.t.height / 2):
             self.t.center_x = touch.x
             self.t.center_y = touch.y
+            self.de.add_widget(Button(text="a", size_hint_y=None, height=10))
+
+    def on_press(self):
+        self.Flo.add_widget(Button(text="a", size_hint_y=None, height=10))
 
 
 class MainApp(App):
